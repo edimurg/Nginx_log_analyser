@@ -37,7 +37,7 @@ Run the script:
 ```bash
 ./ngnix_log_analyser.sh ngnix_log_example
 ```
-![](Screenshot.png)
+![](Screenshot1.png)
 
 ## 🤝 Contributing
 

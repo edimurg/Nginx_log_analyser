@@ -23,13 +23,14 @@ Change permissions:
 ```bash
 chmod +x nginx_log_analyser.sh
 ```
-## 📝 Usage
+## 📝 Usage and Example
 
 Run the script:
 
 ```bash
 ./ngnix_log_analyser.sh ngnix_log_example
 ```
+![](Screenshot.png)
 
 ## 🤝 Contributing
 

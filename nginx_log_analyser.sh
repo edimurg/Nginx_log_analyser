@@ -8,19 +8,19 @@
 
 extract_top_values () { #this function extracts top 5 most requested things in the log file.
 
-	echo -e "Top 5 IP adresses with the most requests:\n"
+	echo "Top 5 IP adresses with the most requests:"
 	awk '{print $1}' $1 | sort | uniq -c | sort -nr | head -5 | awk '{print$2" - " $1 " requests"}'
 	echo ""
 
-	echo -e "Top 5 most requested paths:\n"
+	echo "Top 5 most requested paths:"
 	awk '{print $7}' $1 | sort | uniq -c | sort -nr | head -5 | awk '{print$2" - " $1 " requests"}'
 	echo ""
 
-	echo -e "Top 5 response status codes:\n"
+	echo "Top 5 response status codes:"
 	awk '{print $9}' $1 | sort | uniq -c | sort -nr | head -5 | awk '{print$2" - " $1 " requests"}'
 	echo ""
 
-	echo -e "Top 5 user agents:\n"
+	echo "Top 5 user agents:"
 	awk -F\" '{print $6}' $1 | sort | uniq -c | sort -nr | head -5 | awk '{print $2" - " $1 " requests"}'
 }
 
@@ -46,4 +46,3 @@ error_handling "$1"
 if [ $? -eq 0 ]; then # if the input is correct then the analyse will follow
 	extract_top_values "$1"
 fi
-
